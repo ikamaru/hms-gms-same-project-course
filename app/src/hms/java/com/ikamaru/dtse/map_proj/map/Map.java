@@ -1,4 +1,4 @@
-package com.ikamaru.dtse.map_proj.map.hms;
+package com.ikamaru.dtse.map_proj.map;
 
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
@@ -12,10 +12,10 @@ import com.huawei.hms.maps.model.MarkerOptions;
 import com.ikamaru.dtse.map_proj.R;
 import com.ikamaru.dtse.map_proj.map.IMap;
 
-public class HmsMap implements IMap {
+public class Map implements IMap {
     SupportMapFragment supportMapFragment;
 
-    public HmsMap(FragmentManager fragmentManager){
+    public Map(FragmentManager fragmentManager){
         FragmentTransaction fragmentTransaction=fragmentManager.beginTransaction();
         fragmentTransaction.replace(R.id.map,new SupportMapFragment());
         fragmentTransaction.commitNow();

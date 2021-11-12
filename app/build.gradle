@@ -5,6 +5,18 @@ android {
     compileSdkVersion 30
     buildToolsVersion "30.0.3"
 
+    flavorDimensions "mobileServices"
+    productFlavors {
+        hms {
+            dimension "mobileServices"
+            versionNameSuffix "-hms"
+        }
+        gms {
+            dimension "mobileServices"
+            versionNameSuffix "-gms"
+        }
+    }
+
     defaultConfig {
         applicationId "com.ikamaru.dtse.map_proj"
         minSdkVersion 19
@@ -52,7 +64,7 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
 
     //HMS
-    implementation 'com.huawei.hms:maps:6.0.1.304'
+    hmsImplementation 'com.huawei.hms:maps:6.0.1.304'
     //GMS
-    implementation 'com.google.android.gms:play-services-maps:18.0.0'
+    gmsImplementation 'com.google.android.gms:play-services-maps:18.0.0'
 }

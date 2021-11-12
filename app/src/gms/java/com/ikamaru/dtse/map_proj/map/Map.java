@@ -1,4 +1,4 @@
-package com.ikamaru.dtse.map_proj.map.gms;
+package com.ikamaru.dtse.map_proj.map;
 
 
 import androidx.annotation.NonNull;
@@ -14,10 +14,10 @@ import com.google.android.gms.maps.model.MarkerOptions;
 import com.ikamaru.dtse.map_proj.R;
 import com.ikamaru.dtse.map_proj.map.IMap;
 
-public class GmsMap implements IMap {
+public class Map implements IMap {
     SupportMapFragment supportMapFragment;
 
-    public GmsMap(FragmentManager fragmentManager){
+    public Map(FragmentManager fragmentManager){
         FragmentTransaction fragmentTransaction=fragmentManager.beginTransaction();
         fragmentTransaction.replace(R.id.map,new SupportMapFragment());
         fragmentTransaction.commitNow();

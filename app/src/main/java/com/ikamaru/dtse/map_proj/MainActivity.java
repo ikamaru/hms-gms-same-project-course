@@ -15,7 +15,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        IMap map= Map.build(getSupportFragmentManager(),this);
+        IMap map= new Map(getSupportFragmentManager());
+        //IMap map= Map.build(getSupportFragmentManager(),this);
         map.loadMap();
     }
 }
